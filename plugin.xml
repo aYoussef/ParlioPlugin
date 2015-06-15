@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="com.parlio.commonHandler" version="1.0">
+        <name>Common Handler</name>
+        <description>Parlio common handler plugin, handles all Parlio's frontend calls</description>
+        <license>Apache 2.0</license>
+        <keywords></keywords>
+        <js-module src="www/commonHandler.js" name="commonHandler">
+            <clobbers target="commonHandler" />
+        </js-module>
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="CommonHandler">
+                    <param name="ios-package" value="CommonHandler"/>
+                </feature>
+            </config-file>
+            <header-file src="src/ios/CommonHandler.h" />
+            <source-file src="src/ios/CommonHandler.m" />
+        </platform>
+    </plugin>
